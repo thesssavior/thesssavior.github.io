@@ -1,1 +1,38 @@
-"hello world"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Download Files</h1>
+    <ul id="file-list">
+        <!-- List of files will be populated here -->
+    </ul>
+
+    <script>
+        // JavaScript to dynamically generate the list of files
+        document.addEventListener("DOMContentLoaded", () => {
+            const files = [
+                // List your files here
+                "LMSauto.exe",
+                "chromedriver.exe",
+            ];
+            
+            const fileList = document.getElementById("file-list");
+            
+            files.forEach(file => {
+                const listItem = document.createElement("li");
+                const link = document.createElement("a");
+                link.href = file;
+                link.textContent = file;
+                link.download = file;
+                listItem.appendChild(link);
+                fileList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>
