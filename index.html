@@ -3,41 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Download UI</title>
+    <title>LMSauto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="heading">Download LMSauto</h1>
-
-    <ul id="file-list">
-        <!-- List of files will be populated here -->
-    </ul>
-    
-
-    <script>
-        // JavaScript to dynamically generate the list of files
-        document.addEventListener("DOMContentLoaded", () => {
-            const files = [
-                // List your files here
-                "LMSauto.zip",
-            ];
-            
-            const fileList = document.getElementById("file-list");
-            
-            files.forEach(file => {
-                const listItem = document.createElement("li");
-                const link = document.createElement("a");
-                link.href = file;
-                link.textContent = file;
-                link.download = file;
-                listItem.appendChild(link);
-                fileList.appendChild(listItem);
-            });
-        });
-    </script>
-    <a id="donation" href="https://toss.me/ssavior/5000">
-        <img src="https://media.licdn.com/dms/image/D4D12AQFQEYt2Sf4vng/article-cover_image-shrink_720_1280/0/1701704889630?e=2147483647&v=beta&t=89MWp_ioFE_beKd1jLu3L0qasnWVp2DRr0y9GLlHdtw">
-        <p>커피사주세용</p>
-    </a>
+    <h1 id="heading">LMS 자동사냥</h1>
+    <div>
+        <a id="box1" href="LMSauto.zip">
+            <img id="download" src="https://www.shutterstock.com/image-vector/download-vector-icon-install-symbol-600nw-584449294.jpg">
+            <p id="download">다운로드</p>
+        </a>    
+    </div>
+    <div>
+        <a id="box2" href="https://toss.me/ssavior/2000">
+            <img src="https://media.licdn.com/dms/image/D4D12AQFQEYt2Sf4vng/article-cover_image-shrink_720_1280/0/1701704889630?e=2147483647&v=beta&t=89MWp_ioFE_beKd1jLu3L0qasnWVp2DRr0y9GLlHdtw">
+            <p>커피사주세용</p>
+        </a>    
+    </div>
 </body>
 </html>
